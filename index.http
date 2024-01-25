@@ -1,10 +1,11 @@
-GET http://localhost:3000/listBooks/?search_q=The
+GET https://library-management-prototype.onrender.com/listBooks/?search_q=The
 
 ###
-GET http://localhost:3000/listBooks/
+GET https://library-management-prototype.onrender.com/listBooks/
 
 ###
-POST http://localhost:3000/addBook/
+
+POST https://library-management-prototype.onrender.com/addBook/
 Content-Type:  application/json
 
 {
@@ -14,4 +15,4 @@ Content-Type:  application/json
 }
 
 ###
-DELETE http://localhost:3000/deleteBook/1234/
+DELETE https://library-management-prototype.onrender.com/deleteBook/1234/
