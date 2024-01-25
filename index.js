@@ -44,7 +44,7 @@ class Library {
   }
 
   addBook(book) {
-    if (!(book instanceof Book)) {
+    if (!(book instanceof Book || book instanceof EBook)) {
       throw new Error("Invalid book object. Must be an instance of Book.");
     }
 
@@ -92,6 +92,7 @@ try {
   //instances of Book class
   const book1 = new Book("The Great Gatsby", "F. Scott Fitzgerald", "123456");
   const book2 = new Book("To Kill a Mockingbird", "Harper Lee", "789012");
+  const book3 = new Book("A Tale of Two Cities", "Charles Dickens", "1859");
 
   //instance of library class
   const library = new Library();
@@ -99,6 +100,7 @@ try {
   //testing addBook method of library
   library.addBook(book1);
   library.addBook(book2);
+  library.addBook(book3);
 
   //testing displayBooks method of library
   console.log("All Books:");
@@ -110,10 +112,12 @@ try {
   foundBooksArray.forEach((each) => each.displayInfo());
 
   //testing deleteBook method of library
+  console.log("\t");
   library.deleteBook("123456");
 
   //test the ebook subclass
   const ebook1 = new EBook("Harry Potter", "J.K. Rowling", "567890", "PDF");
+  library.addBook(ebook1);
   console.log("\t");
   ebook1.displayInfo();
 
