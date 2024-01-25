@@ -1,0 +1,17 @@
+GET http://localhost:3000/listBooks/?search_q=The
+
+###
+GET http://localhost:3000/listBooks/
+
+###
+POST http://localhost:3000/addBook/
+Content-Type:  application/json
+
+{
+    "title": "Rich Dad Poor Dad",
+    "author": "Robert Kiyosaki",
+    "ISBN": "1234"
+}
+
+###
+DELETE http://localhost:3000/deleteBook/1234/
